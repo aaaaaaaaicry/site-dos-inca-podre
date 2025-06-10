@@ -1,0 +1,191 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Cores principais */
+:root {
+  --color-primary: #2c3e50;
+  --color-secondary: #2980b9;
+  --color-accent: #f39c12;
+  --color-light: #ecf0f1;
+  --color-dark: #34495e;
+  --color-text: #2c3e50;
+}
+
+/* Tela de boas-vindas */
+#welcome-screen {
+  position: fixed;
+  inset: 0;
+  background: var(--color-primary);
+  color: var(--color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  z-index: 9999;
+  transition: opacity 0.6s ease;
+}
+
+/* Header fixo no topo */
+header {
+  position: sticky;
+  top: 0;
+  background: var(--color-secondary);
+  color: var(--color-light);
+  padding: 15px 20px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Apresentação */
+#presentation {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: var(--color-light);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  color: var(--color-text);
+  line-height: 1.5;
+  text-align: center;
+}
+
+#presentation h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+#presentation h2 {
+  font-size: 1.5rem;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: var(--color-secondary);
+}
+
+#presentation ul.participants {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+#presentation ul.participants li {
+  font-size: 1.2rem;
+  color: var(--color-dark);
+  background: var(--color-light);
+  padding: 10px 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Seções principais */
+main {
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+  padding: 20px;
+}
+
+.section {
+  margin-bottom: 50px;
+  background: var(--color-light);
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  color: var(--color-text);
+  line-height: 1.6;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Títulos das seções */
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Imagens com borda e sombra */
+.img-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.img-container img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  flex: 1 1 300px;
+  object-fit: cover;
+  height: 180px;
+}
+
+/* Parágrafos detalhados */
+.section p {
+  font-size: 1.15rem;
+  color: var(--color-dark);
+  margin-bottom: 18px;
+}
+
+/* Ícones nas listas */
+.fa-user, .fa-landmark, .fa-coins, .fa-paintbrush, .fa-building-columns,
+.fa-seedling, .fa-church, .fa-code-branch, .fa-map-location-dot {
+  color: var(--color-accent);
+}
+
+/* Responsividade */
+@media (max-width: 640px) {
+  header {
+    font-size: 1.4rem;
+    padding: 12px 15px;
+  }
+
+  #presentation h1 {
+    font-size: 1.6rem;
+  }
+
+  #presentation h2 {
+    font-size: 1.2rem;
+  }
+
+  .section h2 {
+    font-size: 1.6rem;
+  }
+
+  .img-container img {
+    height: 140px;
+  }
+}

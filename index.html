@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trabalho História: Império Inca</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome para ícones -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+  <!-- Tela inicial -->
+  <div id="welcome-screen">
+    <h1>Bem-vindo ao nosso trabalho de História sobre o Império Inca!</h1>
+  </div>
+
+  <!-- Apresentação do projeto -->
+  <section id="presentation" class="section fade-slide-up">
+    <h1><i class="fa-solid fa-landmark"></i> Apresentação do Trabalho</h1>
+    <p>
+      Este site explora detalhadamente o Império Inca, abrangendo cultura, economia, arquitetura,
+      religião e muito mais, com uma interface responsiva e visual agradável para todas as telas.
+    </p>
+    <h2><i class="fa-solid fa-users"></i> Participantes</h2>
+<ul class="participants">
+  <li><i class="fa-solid fa-user"></i> Brenno — Programador</li>
+  <li><i class="fa-solid fa-user"></i> Webert Gustavo — Idealizador</li>
+  <li><i class="fa-solid fa-user"></i> Jonathan — Trabalho na cartolina</li>
+</ul>
+  </section>
+
+  <header><i class="fa-solid fa-archway"></i> Império Inca: Cultura, Economia e Sociedade</header>
+
+  <main>
+
+    <!-- Sua parte: Economia e Renda dos Incas -->
+    <section id="economia" class="section fade-slide-up">
+      <h2><i class="fa-solid fa-coins"></i> Economia e Renda dos Incas</h2>
+
+      <div class="img-container">
+        <img src="{{ url_for('static', filename='img/inca_economy.png') }}" alt="Economia Inca" />
+        <img src="{{ url_for('static', filename='img/qollqas.jpg') }}" alt="Qollqas - Armazéns Incas" />
+      </div>
+
+      <p>
+        A economia do Império Inca era baseada principalmente na agricultura coletiva, em um sistema muito organizado e eficiente, sem uso de moeda. A maior parte da produção agrícola era destinada à subsistência da população e ao Estado.
+      </p>
+      <p>
+        Um dos pilares dessa economia era o <strong>mit’a</strong>, um sistema de trabalho obrigatório em que cada cidadão contribuía com seu trabalho em projetos públicos, como construção de estradas, pontes, terraços agrícolas e armazenamento de alimentos.
+      </p>
+      <p>
+        Para garantir o abastecimento e a segurança alimentar, os Incas construíram os <strong>qollqas</strong>, grandes armazéns espalhados pelo império, onde eram guardados alimentos e recursos para serem usados em tempos de escassez, além de manter reservas para o exército e para os trabalhadores públicos.
+      </p>
+      <p>
+        Não havia circulação de moedas, e os impostos eram cobrados em forma de trabalho e produtos. Esse sistema garantiu a coesão social e a estabilidade econômica do Império, sendo um modelo sofisticado de organização pré-industrial.
+      </p>
+    </section>
+
+    <!-- Outras seções importantes -->
+
+    <section class="section fade-slide-up">
+      <h2><i class="fa-solid fa-paintbrush"></i> Cultura dos Incas</h2>
+      <div class="img-container">
+        <img src="{{ url_for('static', filename='img/inca_culture.jpg') }}" alt="Cultura Inca" />
+      </div>
+      <p>
+        A cultura Inca era rica e diversificada, com uma forte ênfase na tradição oral, arte e arquitetura. Desenvolveram técnicas de tecelagem e cerâmica altamente sofisticadas, e possuíam um profundo respeito pela natureza e pelos seus deuses.
+      </p>
+    </section>
+
+    <section class="section fade-slide-up">
+      <h2><i class="fa-solid fa-building-columns"></i> Arquitetura Inca</h2>
+      <div class="img-container">
+        <img src="{{ url_for('static', filename='img/inca_architecture.jpg') }}" alt="Arquitetura Inca" />
+      </div>
+      <p>
+        Os Incas eram mestres na construção de estruturas resistentes e harmoniosas, usando pedras perfeitamente encaixadas sem argamassa. Exemplos famosos são Machu Picchu e Sacsayhuamán, que demonstram seu conhecimento em engenharia e urbanismo.
+      </p>
+    </section>
+
+    <section class="section fade-slide-up">
+      <h2><i class="fa-solid fa-seedling"></i> Agricultura e Terraços</h2>
+      <div class="img-container">
+        <img src="{{ url_for('static', filename='img/inca_agriculture.jpg') }}" alt="Agricultura Inca" />
+      </div>
+      <p>
+        Para vencer os desafios da geografia montanhosa, os Incas criaram terraços agrícolas que evitavam a erosão do solo e permitiam o cultivo eficiente. Cultivavam milho, batata, quinoa e outras plantas adaptadas ao clima andino.
+      </p>
+    </section>
+
+    <section class="section fade-slide-up">
+      <h2><i class="fa-solid fa-church"></i> Religião e Crenças</h2>
+      <div class="img-container">
+        <img src="{{ url_for('static', filename='img/inca_religion.jpg') }}" alt="Religião Inca" />
+      </div>
+      <p>
+        Os Incas eram politeístas e acreditavam em uma ligação direta entre o mundo natural e seus deuses. O deus Sol (Inti) era o mais importante, e os rituais religiosos eram essenciais para manter a ordem do cosmos e o favor divino para a prosperidade do império.
+      </p>
+    </section>
+
+    <section class="section fade-slide-up">
+      <h2><i class="fa-solid fa-code-branch"></i> Sistema de Comunicação: Quipu</h2>
+      <div class="img-container">
+        <img src="{{ url_for('static', filename='img/inca_quipu.jpg') }}" alt="Quipu" />
+      </div>
+      <p>
+        O Quipu era um sistema de cordões com nós que permitia registrar informações econômicas, demográficas e administrativas, funcionando como uma forma complexa de comunicação e contabilidade, mesmo sem um sistema de escrita formal.
+      </p>
+    </section>
+
+    <section class="section fade-slide-up">
+      <h2><i class="fa-solid fa-map-location-dot"></i> Mapa do Império Inca</h2>
+      <div class="img-container">
+        <img src="{{ url_for('static', filename='img/inca_map.jpg') }}" alt="Mapa do Império Inca" />
+      </div>
+      <p>
+        O Império Inca se estendia por vários países atuais da América do Sul, do sul da Colômbia até o centro do Chile. Sua extensão e organização impressionaram exploradores europeus pela complexidade e eficiência.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script>
+    // Fade out da tela de boas-vindas após 3 segundos
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('welcome-screen').style.opacity = '0';
+        setTimeout(() => {
+          document.getElementById('welcome-screen').style.display = 'none';
+        }, 600);
+      }, 3000);
+    });
+
+    // Scroll Reveal básico
+    function reveal() {
+      document.querySelectorAll('.fade-slide-up').forEach((el) => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 80) {
+          el.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', reveal);
+    window.addEventListener('load', reveal);
+  </script>
+
+</body>
+</html>
